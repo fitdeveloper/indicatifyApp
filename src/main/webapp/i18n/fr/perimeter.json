@@ -1,0 +1,27 @@
+{
+  "indicatifyApp": {
+    "perimeter": {
+      "home": {
+        "title": "Perimeters",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Perimeter",
+        "createOrEditLabel": "Créer ou éditer un Perimeter",
+        "notFound": "Aucun Perimeter trouvé"
+      },
+      "created": "Un nouveau Perimeter a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Perimeter avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Perimeter avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Perimeter {{ id }} ?"
+      },
+      "detail": {
+        "title": "Perimeter"
+      },
+      "id": "ID",
+      "namePerimeter": "Name Perimeter",
+      "descPerimeter": "Desc Perimeter",
+      "activity": "Activity",
+      "employee": "Employee"
+    }
+  }
+}

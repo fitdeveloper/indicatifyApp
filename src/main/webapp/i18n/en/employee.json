@@ -1,0 +1,40 @@
+{
+  "indicatifyApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Employee",
+        "createOrEditLabel": "Create or edit a Employee",
+        "notFound": "No Employees found"
+      },
+      "created": "A new Employee is created with identifier {{ param }}",
+      "updated": "A Employee is updated with identifier {{ param }}",
+      "deleted": "A Employee is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Employee {{ id }}?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "id": "ID",
+      "firstnameEmployee": "Firstname Employee",
+      "lastnameEmployee": "Lastname Employee",
+      "matriculationNumberEmployee": "Matriculation Number Employee",
+      "dateOfBirthEmployee": "Date Of Birth Employee",
+      "emailEmployee": "Email Employee",
+      "phoneEmployee": "Phone Employee",
+      "hireDateEmployee": "Hire Date Employee",
+      "genderEmployee": "Gender Employee",
+      "descEmployee": "Desc Employee",
+      "user": "User",
+      "superiorEmployee": "Superior Employee",
+      "jobTitle": "Job Title",
+      "level": "Level",
+      "knowledgeDomain": "Knowledge Domain",
+      "perimeter": "Perimeter",
+      "site": "Site",
+      "subordinateEmployee": "Subordinate Employee"
+    }
+  }
+}

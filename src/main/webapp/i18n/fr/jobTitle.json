@@ -1,0 +1,25 @@
+{
+  "indicatifyApp": {
+    "jobTitle": {
+      "home": {
+        "title": "JobTitles",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Job Title",
+        "createOrEditLabel": "Créer ou éditer un Job Title",
+        "notFound": "Aucun Job Title trouvé"
+      },
+      "created": "Un nouveau Job Title a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Job Title avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Job Title avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Job Title {{ id }} ?"
+      },
+      "detail": {
+        "title": "Job Title"
+      },
+      "id": "ID",
+      "nameJobTitle": "Name Job Title",
+      "descJobTitle": "Desc Job Title"
+    }
+  }
+}

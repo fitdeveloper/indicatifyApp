@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20231031203513",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "perimeter",
+  "fields": [
+    {
+      "fieldName": "namePerimeter",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "descPerimeter",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Perimeter",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "perimeter",
+      "relationshipName": "activity",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "perimeter",
+      "ownerSide": false,
+      "relationshipName": "employee",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

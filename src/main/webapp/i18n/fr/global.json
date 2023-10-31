@@ -7,6 +7,13 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entités",
+        "site": "Site",
+        "jobTitle": "Job Title",
+        "knowledgeDomain": "Knowledge Domain",
+        "level": "Level",
+        "perimeter": "Perimeter",
+        "activity": "Activity",
+        "employee": "Employee",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

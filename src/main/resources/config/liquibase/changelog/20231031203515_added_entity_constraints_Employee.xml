@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Employee.
+    -->
+    <changeSet id="20231031203515-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="employee"
+                                 constraintName="fk_employee__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="superior_employee_id"
+                                 baseTableName="employee"
+                                 constraintName="fk_employee__superior_employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="job_title_id"
+                                 baseTableName="employee"
+                                 constraintName="fk_employee__job_title_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="job_title"/>
+
+        <addForeignKeyConstraint baseColumnNames="level_id"
+                                 baseTableName="employee"
+                                 constraintName="fk_employee__level_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="level"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="rel_employee__knowledge_domain"
+                                 constraintName="fk_rel_employee__knowledge_domain__employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="knowledge_domain_id"
+                                 baseTableName="rel_employee__knowledge_domain"
+                                 constraintName="fk_rel_employee__knowledge_domain__knowledge_domain_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="knowledge_domain"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="rel_employee__perimeter"
+                                 constraintName="fk_rel_employee__perimeter__employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="perimeter_id"
+                                 baseTableName="rel_employee__perimeter"
+                                 constraintName="fk_rel_employee__perimeter__perimeter_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="perimeter"/>
+
+        <addForeignKeyConstraint baseColumnNames="site_id"
+                                 baseTableName="employee"
+                                 constraintName="fk_employee__site_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="site"/>
+    </changeSet>
+</databaseChangeLog>

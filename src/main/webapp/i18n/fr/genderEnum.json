@@ -1,0 +1,9 @@
+{
+  "indicatifyApp": {
+    "GenderEnum": {
+      "null": "",
+      "Male": "Male",
+      "Female": "Female"
+    }
+  }
+}

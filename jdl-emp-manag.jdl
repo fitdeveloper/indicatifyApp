@@ -1,0 +1,87 @@
+entity Site {
+     nameSite String required unique,
+     addressSite String required,
+     descSite String
+}
+
+entity JobTitle {
+     nameJobTitle String required unique,
+     descJobTitle String
+}
+
+entity KnowledgeDomain {
+   nameKnowledgeDomain String required unique,
+   descKnowledgeDomain String
+}
+
+entity Level {
+    nameLevel String required unique,
+    valueLevel LevelEnum required,
+    descLevel String
+}
+
+entity Perimeter {
+    namePerimeter String required unique,
+    descPerimeter String
+}
+
+entity Activity {
+    nameActivity String required unique,
+    descActivity String
+}
+
+entity Employee {
+    firstnameEmployee String required,
+    lastnameEmployee String required,
+    matriculationNumberEmployee String required unique,
+    dateOfBirthEmployee LocalDate required,
+    emailEmployee String required,
+    phoneEmployee String,
+    hireDateEmployee LocalDate,
+    genderEmployee GenderEnum required,
+    descEmployee String
+}
+
+
+
+enum LevelEnum {
+  N0,
+  N1,
+  N2,
+  N3
+}
+
+enum GenderEnum {
+	Male,
+	Female
+}
+
+
+
+relationship OneToOne {
+    Employee{user required} to User
+}
+
+relationship ManyToMany {
+ 	Employee to KnowledgeDomain
+    Employee to Perimeter
+}
+
+relationship ManyToOne {
+    Employee{superiorEmployee} to Employee{subordinateEmployee},
+    Employee{jobTitle required} to JobTitle,
+    Employee{level required} to Level
+}
+
+relationship OneToMany {
+	Site{employee} to Employee{site required},
+    Activity{perimeter} to Perimeter{activity required}
+}
+
+
+dto * with mapstruct
+paginate * with pagination
+service all with serviceImpl
+
+
+

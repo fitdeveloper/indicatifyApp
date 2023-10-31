@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20231031203510",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "job_title",
+  "fields": [
+    {
+      "fieldName": "nameJobTitle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "descJobTitle",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "JobTitle",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

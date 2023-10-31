@@ -1,0 +1,26 @@
+{
+  "indicatifyApp": {
+    "knowledgeDomain": {
+      "home": {
+        "title": "KnowledgeDomains",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Knowledge Domain",
+        "createOrEditLabel": "Créer ou éditer un Knowledge Domain",
+        "notFound": "Aucun Knowledge Domain trouvé"
+      },
+      "created": "Un nouveau Knowledge Domain a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Knowledge Domain avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Knowledge Domain avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Knowledge Domain {{ id }} ?"
+      },
+      "detail": {
+        "title": "Knowledge Domain"
+      },
+      "id": "ID",
+      "nameKnowledgeDomain": "Name Knowledge Domain",
+      "descKnowledgeDomain": "Desc Knowledge Domain",
+      "employee": "Employee"
+    }
+  }
+}

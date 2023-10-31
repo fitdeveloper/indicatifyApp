@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20231031203512",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "level",
+  "fields": [
+    {
+      "fieldName": "nameLevel",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "valueLevel",
+      "fieldType": "LevelEnum",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "N0,N1,N2,N3"
+    },
+    {
+      "fieldName": "descLevel",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Level",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

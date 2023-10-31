@@ -1,0 +1,112 @@
+{
+  "applications": "*",
+  "changelogDate": "20231031203515",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "employee",
+  "fields": [
+    {
+      "fieldName": "firstnameEmployee",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastnameEmployee",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "matriculationNumberEmployee",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "dateOfBirthEmployee",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "emailEmployee",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneEmployee",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hireDateEmployee",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "genderEmployee",
+      "fieldType": "GenderEnum",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "Male,Female"
+    },
+    {
+      "fieldName": "descEmployee",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Employee",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "subordinateEmployee",
+      "relationshipName": "superiorEmployee",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "jobTitle",
+      "relationshipName": "jobTitle",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "level",
+      "relationshipName": "level",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "knowledgeDomain",
+      "otherEntityRelationshipName": "employee",
+      "ownerSide": true,
+      "relationshipName": "knowledgeDomain",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "perimeter",
+      "otherEntityRelationshipName": "employee",
+      "ownerSide": true,
+      "relationshipName": "perimeter",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "site",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "site",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "superiorEmployee",
+      "relationshipName": "subordinateEmployee",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

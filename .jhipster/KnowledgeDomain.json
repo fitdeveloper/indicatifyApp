@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20231031203511",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "knowledge_domain",
+  "fields": [
+    {
+      "fieldName": "nameKnowledgeDomain",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "descKnowledgeDomain",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "KnowledgeDomain",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "knowledgeDomain",
+      "ownerSide": false,
+      "relationshipName": "employee",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
